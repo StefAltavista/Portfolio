@@ -1,5 +1,26 @@
-{
-    "animate": {
-        "url": "https://petitionanimate.herokuapp.com/home"
+[
+    {
+        "name": "noises",
+        "title": "Noises",
+        "url": "https://petitionanimate.herokuapp.com/home",
+        "img": "url"
+    },
+    {
+        "name": "animatepetition",
+        "title": "Animate Petition",
+        "url": "https://petitionanimate.herokuapp.com/home",
+        "img": "url"
+    },
+    {
+        "name": "wrongimage",
+        "title": "Wrong Image",
+        "url": "https://petitionanimate.herokuapp.com/home",
+        "img": "url"
+    },
+    {
+        "name": "mobileapps",
+        "title": "Mobile Apps",
+        "url": "https://petitionanimate.herokuapp.com/home",
+        "img": "url"
     }
-}
+]

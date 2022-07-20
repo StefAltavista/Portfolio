@@ -1,29 +1,38 @@
 import React from "react";
+import Home from "./Home";
+import ProjectPreview from "./ProjectPreview";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 export default function App() {
     return (
-        <div id="body">
-            <h1>Stefano Altavista Mascitti</h1>
-            <p>
-                I am a Creative, Evergrowing Technological being.<br></br>{" "}
-                Digital Artist <br></br> Full-Stack Developper{" "}
-            </p>
-            <div id="board">
-                <div id="project">
-                    <p>Noises</p>
-                </div>
+        <div>
+            <BrowserRouter>
+                <Routes>
+                    <Route exact path="/" element={<Home />}></Route>
 
-                <div id="project">
-                    <p>Animate Petition</p>
-                </div>
+                    <Route
+                        exact
+                        path="/noises"
+                        element={<ProjectPreview name="noises" />}
+                    ></Route>
 
-                <div id="project">
-                    <p>Wrong Image</p>
-                </div>
-                <div id="project">
-                    <p>Mobile Apps</p>
-                </div>
-            </div>
+                    <Route
+                        exact
+                        path="/animatepetition"
+                        element={<ProjectPreview name="Animate Petition" />}
+                    ></Route>
+                    <Route
+                        exact
+                        path="/wrongimage"
+                        element={<ProjectPreview name="Wrong Image" />}
+                    ></Route>
+                    <Route
+                        exact
+                        path="/mobileapps"
+                        element={<ProjectPreview name="mobileapps" />}
+                    ></Route>
+                </Routes>
+            </BrowserRouter>
         </div>
     );
 }

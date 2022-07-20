@@ -1,0 +1,22 @@
+body {
+    background-color: aquamarine;
+}
+
+#body {
+    background-color: "lightblue";
+}
+#board {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: blue;
+}
+
+#project {
+    width: 400px;
+    height: 400px;
+
+    background-color: aquamarine;
+    margin: 50px;
+}

@@ -1,5 +1,4 @@
 body {
-    background-color: aquamarine;
 }
 
 #board {
@@ -16,4 +15,9 @@ body {
 
     background-color: rgb(255, 127, 212);
     margin: 50px;
+}
+
+#canvas {
+    width: 1vw;
+    height: 500px;
 }

@@ -46,16 +46,16 @@ export default function PerlinNoise(p5) {
 }
 
 function perlinWorm(p5) {
-    var x = p5.noise(xoff1, xoff1) * 1000;
-    var y = p5.noise(xoff2, xoff2) * 1000;
+    var x = p5.noise(xoff1, xoff1) * Math.random() * 1500;
+    var y = p5.noise(xoff2, xoff2) * Math.random() * 1500;
     var z = p5.noise(y) * 50;
     xoff1 += 0.005;
     xoff2 += 0.005;
-    p5.fill(y / 4, x / 4, x - y / 4, z + 100);
+    p5.fill(y / 4, x / 4 / (y / 2), x - y / 4, z * 5);
 
-    p5.stroke(p5.color(x / 4, y / 4, z * 5));
+    p5.stroke(p5.color(x / x, y / 8, z * 5));
 
-    p5.ellipse(x + x, y, x / 7, y / 7);
+    p5.rect(x + x, y, x / 7, y / 7);
 }
 
 function perlinScope(p5) {

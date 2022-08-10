@@ -2,25 +2,63 @@
     {
         "name": "noises",
         "title": "Noises",
+        "subtitle": "Social Network for promotes & event Calendar",
         "url": "https://petitionanimate.herokuapp.com/home",
-        "img": "url"
-    },
-    {
-        "name": "animatepetition",
-        "title": "Animate Petition",
-        "url": "https://petitionanimate.herokuapp.com/home",
-        "img": "url"
+        "images": "/images/noises/logo.png",
+        "background": "rgb(108, 126, 240)",
+        "color": "rgb(0,0,0)",
+        "tech": "Event Calendar, Personal account page, Event creator and manager, with notes archive and other features, also internal messenger and mailing list system",
+        "description": "Noises was born as a social network for music labels, event organizers and promoter of the Berlin Noise, underground Techno and Experimental music scene. The aim of the network was to let oganizations comunicate, bound and collaborate more fluently, since this is often a delicate process. It was created during a programming bootcamp as an Excercise but then took more and more hape and became an official website. Noises is now also an onsubtitle calendar where users can very simply view the published events and organizers profile, withut the need of signing in. Its free Platform that promotes alternative and countercoulture. S.A.M. created this platform also to be used for his own Label Autonoma Industrile, as most of the event promotion platform are nowadays controlled by mediatic and commercial algorythms that as a matter of fact do not push for cultural development but anihilation of individuality for the subsitence and groth of a manipulated society.  Since there is big social movement in the realm of avantgarde, unconventional and extreme art Noises wants to give a voice to the underdogs, that have always been the foundation of our society and now need to reclaim their space.",
+        "development": "Javascript - React - Express - Node.js, SQL "
     },
     {
         "name": "wrongimage",
         "title": "Wrong Image",
-        "url": "https://petitionanimate.herokuapp.com/home",
-        "img": "url"
+        "subtitle": "Image manipulator and NFT minter",
+        "url": "https://wrongimage.herokuapp.com/home",
+        "images": "url",
+        "background": "rgb(0, 0, 0)",
+        "color": "rgb(150, 240, 167)",
+        "tech": "Access via Metamask personal wallet, create and manipulate images, store on IPFS, mint NFT ",
+        "description": "Within the realm of Web3: Wrong Image is a Glitch Art Generator and NFT minter based on P5js. There are 7 different algorithms each of which has his own parameters that allow the user to manipulate and blend pictures of multiple format. The finalized image can be downloaded or stored on IPFS (Inter Planetary File System) the industrial standard for NFT storing. Once the picture is saved the used can access his own gallery, and mint each of those immages into the Polygon chain. Supported by NFTport the user can also query The Ethereum and Poligon blockchain to view all the NFTS that belongs to any Crypto wallet. The user can access the website with his personal crypto wallet address through Metamask. The website is available but also is still being developped.",
+        "development": "Javascript - React - Express - Node.js - P5JS - SQL"
     },
+    {
+        "name": "WImageboard",
+        "title": "Wrong Image-Board",
+        "subtitle": "Image Gallery",
+        "url": "https://wrongimage.herokuapp.com/home",
+        "images": "url",
+        "background": "rgb(108, 240, 117)",
+        "color": "rgb(0, 0, 0)",
+        "tech": "Upload Picture on a personal wall, Leave comments, infinite scroll",
+        "description": "Conceptually connected to Wrong Image, this ImageBoard is a simple one page application created in Vue.Js that allows the user to upload picture on a personal dashboard. User can also leave comments and delete pictures previously stored on the Amazon Database via S3",
+        "development": "Javascript - VUEJS - Express - Node.js - SQL"
+    },
+
+    {
+        "name": "animatepetition",
+        "title": "Animate Petition",
+        "subtitle": "User based petition website with animations ",
+        "url": "https://petitionanimate.herokuapp.com/home",
+        "images": "url",
+        "background": "rgb(141, 202, 255)",
+        "color": "rgb(57, 50, 134)",
+        "tech": "Create Account, sign petition with Canvas, query database",
+        "description": "Animate is a studio project where users can create personal account and access a website of Petitions, in this case there is only one petition to sign: `Animate your Website`. A mehr silly theme where the creator suggest that every website should be animated by law. The twist comes in as the whole website is actually animated. Using only Vanilla Javascript S.A.M. created a 3D looking bubbleworld with a very aesthetic imprint that aims to actualy convice the suer that this is the `Right petition to sigh` ! ",
+        "development": "Javascript - Handlebars - Express - Node.js, Canvas, SQL "
+    },
+
     {
         "name": "mobileapps",
         "title": "Mobile Apps",
-        "url": "https://petitionanimate.herokuapp.com/home",
-        "img": "url"
+        "subtitle": "Collection of various IOs & Android mobile applications",
+        "url": null,
+        "images": "url",
+        "background": "rgb(240, 196, 108)",
+        "color": "rgb(0, 0, 0)",
+        "tech": "IOs and Android mobile applications",
+        "description": "A collection of several Mobile application created throught the Udemy - React Native Course",
+        "development": "Javascript - React - React Native"
     }
 ]

@@ -1,6 +1,6 @@
 import React from "react";
 import Home from "./Home";
-import ProjectPreview from "./ProjectPreview";
+import Project from "./Project";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 export default function App() {
@@ -13,23 +13,33 @@ export default function App() {
                     <Route
                         exact
                         path="/noises"
-                        element={<ProjectPreview name="noises" />}
+                        element={<Project name="noises" />}
                     ></Route>
 
                     <Route
                         exact
                         path="/animatepetition"
-                        element={<ProjectPreview name="Animate Petition" />}
+                        element={<Project name="Animate Petition" />}
                     ></Route>
                     <Route
                         exact
                         path="/wrongimage"
-                        element={<ProjectPreview name="Wrong Image" />}
+                        element={<Project name="Wrong Image" />}
+                    ></Route>
+                    <Route
+                        exact
+                        path="/wrongimageboard"
+                        element={<Project name="Wrong Image-Board" />}
                     ></Route>
                     <Route
                         exact
                         path="/mobileapps"
-                        element={<ProjectPreview name="mobileapps" />}
+                        element={<Project name="mobileapps" />}
+                    ></Route>
+                    <Route
+                        exact
+                        path="/about"
+                        element={<Project name="about" />}
                     ></Route>
                 </Routes>
             </BrowserRouter>

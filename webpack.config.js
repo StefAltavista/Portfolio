@@ -3,17 +3,17 @@ const HTMLwebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-    // entry: "./client/src/start.js",
+    // entry: "./public/src/start.js",
     entry: [
-        path.join(__dirname, "client", "css", "style.css"),
-        path.join(__dirname, "client", "src", "start.js"),
+        path.join(__dirname, "public", "css", "style.css"),
+        path.join(__dirname, "public", "src", "start.js"),
     ],
     output: {
         path: path.join(__dirname, "/dist"),
         filename: "bundle.js",
     },
     plugins: [
-        new HTMLwebpackPlugin({ template: "./client/src/index.html" }),
+        new HTMLwebpackPlugin({ template: "./public/src/index.html" }),
         new MiniCssExtractPlugin(),
     ],
 

@@ -5,17 +5,44 @@ const projects = require("../../../content.json");
 
 export default function Project({ name }) {
     console.log("PROJ", name);
-    const proj = projects.find((x) => x.name == name);
+    const project = projects.find((x) => x.name == name);
 
     return (
         <div id="project">
-            <NavBar idn="appear" />
-            <div id="projBody">
-                <p id="pTitle">{proj.title}</p>
-                <p id="pDescription">{proj.description}</p>
-                <a href={proj.url} id="pLinkTo">
-                    Go to {proj.name}
+            <NavBar
+                idn="appear"
+                css={{
+                    backgroundColor: project.background,
+                    color: project.color,
+                }}
+            />
+            <div
+                id="projBody"
+                style={
+                    project.name == "wrongimage"
+                        ? { color: project.color }
+                        : { color: project.background }
+                }
+            >
+                <a href={project.url} target="blank">
+                    <p id="pTitle">{project.title}</p>
                 </a>
+                <p id="pSub">{project.subtitle}</p>
+                <div id="pInfo">
+                    <a href={project.url} target="blank">
+                        <img src={project.images[0]} id="pTop" />
+                    </a>
+                    <p id="pDescription">{project.description}</p>
+                </div>
+                <a href={project.url} id="pLinkTo">
+                    Go to {project.name}
+                </a>
+
+                <div id="pImages">
+                    {project.images.map((x, i) =>
+                        i == 0 ? null : <img src={x} key={i} id="pImg" />
+                    )}
+                </div>
             </div>
         </div>
     );

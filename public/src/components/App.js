@@ -1,12 +1,12 @@
 import React from "react";
 import Home from "./Home";
 import Project from "./Project";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 
 export default function App() {
     return (
         <div>
-            <BrowserRouter>
+            <HashRouter>
                 <Routes>
                     <Route exact path="/" element={<Home />}></Route>
 
@@ -19,17 +19,17 @@ export default function App() {
                     <Route
                         exact
                         path="/animatepetition"
-                        element={<Project name="Animate Petition" />}
+                        element={<Project name="animate" />}
                     ></Route>
                     <Route
                         exact
                         path="/wrongimage"
-                        element={<Project name="Wrong Image" />}
+                        element={<Project name="wrongimage" />}
                     ></Route>
                     <Route
                         exact
                         path="/wrongimageboard"
-                        element={<Project name="Wrong Image-Board" />}
+                        element={<Project name="wrongimageboard" />}
                     ></Route>
                     <Route
                         exact
@@ -42,7 +42,7 @@ export default function App() {
                         element={<Project name="about" />}
                     ></Route>
                 </Routes>
-            </BrowserRouter>
+            </HashRouter>
         </div>
     );
 }

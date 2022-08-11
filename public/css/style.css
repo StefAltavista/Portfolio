@@ -1,7 +1,10 @@
+* {
+    box-sizing: border-box;
+}
 body {
     margin: 0;
     margin-left: 2px;
-    color: rgb(141, 202, 255);
+
     background-color: rgb(0, 0, 0);
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
         "Lucida Sans", Arial, sans-serif;
@@ -12,6 +15,9 @@ a {
     font-family: "Trebuchet MS";
 }
 
+#sam a {
+    color: rgb(141, 202, 255);
+}
 #sam {
     position: absolute;
     top: 0%;
@@ -71,10 +77,9 @@ a {
 #navbar {
     position: fixed;
     top: 0;
-    left: -188px;
-    background-color: rgb(84, 73, 109);
+    left: -149px;
     height: 100vh;
-    width: 161px;
+    width: 150px;
     padding: 20px;
     padding-left: 30px;
     display: flex;
@@ -84,7 +89,7 @@ a {
 }
 #navbar a,
 p {
-    color: rgb(141, 189, 255);
+    color: none;
 }
 #navbar p:hover {
     color: rgb(96, 105, 172);
@@ -100,27 +105,68 @@ p {
 }
 
 #appear {
-    background-color: rgb(84, 73, 109);
+    position: fixed;
+    background-color: rgb(170, 105, 105);
     height: 100vh;
-    width: 100px;
-    padding: 20px;
-    padding-left: 30px;
+    width: 150px;
+    padding-top: 20px;
+    padding-left: 20px;
     display: flex;
     flex-direction: column;
     opacity: 100%;
+    transition: 1s;
 }
 #appear p:hover {
     color: rgb(96, 105, 172);
     cursor: pointer;
 }
 
+#pList {
+    font-size: 14px;
+    padding-left: 20px;
+}
+
 #project {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 #projBody {
-    width: 70%;
+    transition: 1s;
+    text-align: center;
+    margin-left: 150px;
+    padding-left: 20px;
+}
+#pTitle {
+    font-size: 30px;
+}
+
+#pTop {
+    width: 500px;
+    height: 500px;
+    margin: 0;
+    object-fit: scale-down;
+}
+#pInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #pDescription {
+    padding-left: 20px;
     font-size: 12px;
+}
+
+#pImages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#pImg {
+    border: 1px solid rgb(255, 255, 255);
+    margin: 20px;
+    width: 500px;
+
+    object-fit: scale-down;
 }

@@ -1,10 +1,28 @@
 [
     {
+        "name": "about",
+        "title": "Stefano Mascitti Altavista",
+        "subtitle": "Full stack web Developer",
+        "url": null,
+        "images": "url",
+        "background": "rgb(240, 196, 108)",
+        "color": "rgb(0, 0, 0)",
+        "tech": "STACKS",
+        "description": "Short Bio",
+        "development": "About this Website"
+    },
+    {
         "name": "noises",
         "title": "Noises",
         "subtitle": "Social Network for promotes & event Calendar",
         "url": "https://petitionanimate.herokuapp.com/home",
-        "images": "/images/noises/logo.png",
+        "images": [
+            "/images/noises/1.png",
+            "/images/noises/2.png",
+            "/images/noises/3.png",
+            "/images/noises/4.png",
+            "/images/noises/5.png"
+        ],
         "background": "rgb(108, 126, 240)",
         "color": "rgb(0,0,0)",
         "tech": "Event Calendar, Personal account page, Event creator and manager, with notes archive and other features, also internal messenger and mailing list system",
@@ -16,7 +34,13 @@
         "title": "Wrong Image",
         "subtitle": "Image manipulator and NFT minter",
         "url": "https://wrongimage.herokuapp.com/home",
-        "images": "url",
+        "images": [
+            "/images/wrongimage/1.png",
+            "/images/wrongimage/2.png",
+            "/images/wrongimage/3.png",
+            "/images/wrongimage/4.png",
+            "/images/wrongimage/5.png"
+        ],
         "background": "rgb(0, 0, 0)",
         "color": "rgb(150, 240, 167)",
         "tech": "Access via Metamask personal wallet, create and manipulate images, store on IPFS, mint NFT ",
@@ -24,11 +48,15 @@
         "development": "Javascript - React - Express - Node.js - P5JS - SQL"
     },
     {
-        "name": "WImageboard",
+        "name": "wrongimageboard",
         "title": "Wrong Image-Board",
         "subtitle": "Image Gallery",
         "url": "https://wrongimage.herokuapp.com/home",
-        "images": "url",
+        "images": [
+            "/images/wrongimageboard/1.png",
+            "/images/wrongimageboard/2.png",
+            "/images/wrongimageboard/3.png"
+        ],
         "background": "rgb(108, 240, 117)",
         "color": "rgb(0, 0, 0)",
         "tech": "Upload Picture on a personal wall, Leave comments, infinite scroll",
@@ -37,11 +65,17 @@
     },
 
     {
-        "name": "animatepetition",
-        "title": "Animate Petition",
+        "name": "animate",
+        "title": "Animate",
         "subtitle": "User based petition website with animations ",
         "url": "https://petitionanimate.herokuapp.com/home",
-        "images": "url",
+        "images": [
+            "/images/animate/1.png",
+            "/images/animate/2.png",
+            "/images/animate/3.png",
+            "/images/animate/4.png",
+            "/images/animate/5.png"
+        ],
         "background": "rgb(141, 202, 255)",
         "color": "rgb(57, 50, 134)",
         "tech": "Create Account, sign petition with Canvas, query database",

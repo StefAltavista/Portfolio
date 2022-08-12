@@ -1,7 +1,7 @@
 {
-    "name": "react-init",
+    "name": "sam",
     "version": "1.0.0",
-    "description": "react project boilerplate",
+    "description": "Portfolio",
     "main": "index.js",
     "homepage": "./",
     "scripts": {

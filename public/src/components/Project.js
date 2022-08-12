@@ -34,9 +34,11 @@ export default function Project({ name }) {
                     </a>
                     <p id="pDescription">{project.description}</p>
                 </div>
-                <a href={project.url} id="pLinkTo">
-                    Go to {project.title}
-                </a>
+                {project.name != "about" && project.name != "mobileapps" ? (
+                    <a href={project.url} id="pLinkTo">
+                        Go to {project.title}
+                    </a>
+                ) : null}
 
                 <div id="pImages">
                     {project.images.map((x, i) =>

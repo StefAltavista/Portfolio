@@ -79,7 +79,7 @@
         "title": "Mobile Apps",
         "subtitle": "Collection of various IOs & Android mobile applications",
         "url": null,
-        "images": [""],
+        "images": ["/images/mobileapps/logo.png"],
         "background": "rgb(240, 196, 108)",
         "color": "rgb(0, 0, 0)",
         "tech": "IOs and Android mobile applications",
@@ -89,13 +89,13 @@
     {
         "name": "about",
         "title": "Contacts & About Stefano Mascitti Altavista",
-        "subtitle": "Full stack web Developer",
+        "subtitle": "Full-stack Web Developer",
         "url": "./",
         "images": ["/images/about/Logo.png"],
         "background": "rgb(255, 85, 85)",
         "color": "rgb(0, 0, 0)",
-        "tech": "STACKS",
+        "tech": "Javascrip - Typescript - SQL - Node.js - Express - React - React Native - Vue.js - Handlebars - P5js - C - Java - PHP",
         "description": "Short Bio",
-        "development": "About this Website"
+        "development": "This portfolio website is a one page application created in Javascrip with React. It represents an overview of my last and most valuable project, some of them still active and in development some of them created for studying purpuses. "
     }
 ]

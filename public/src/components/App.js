@@ -18,7 +18,7 @@ export default function App() {
 
                     <Route
                         exact
-                        path="/animatepetition"
+                        path="/animate"
                         element={<Project name="animate" />}
                     ></Route>
                     <Route

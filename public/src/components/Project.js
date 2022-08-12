@@ -35,7 +35,7 @@ export default function Project({ name }) {
                     <p id="pDescription">{project.description}</p>
                 </div>
                 <a href={project.url} id="pLinkTo">
-                    Go to {project.name}
+                    Go to {project.title}
                 </a>
 
                 <div id="pImages">

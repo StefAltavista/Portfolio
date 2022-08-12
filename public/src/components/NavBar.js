@@ -3,9 +3,10 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function NavBar({ idn, css }) {
-    const [projects, setProjects] = useState(false);
+    const [proj, setProj] = useState(false);
+    const projects = require("../../../content.json");
     const toggle = () => {
-        setProjects(!projects);
+        setProj(!proj);
     };
 
     const bg = css.backgroundColor;
@@ -23,23 +24,19 @@ export default function NavBar({ idn, css }) {
                     Projects
                 </p>
 
-                {projects ? (
+                {proj ? (
                     <div id="pList">
-                        <Link to="/noises" style={{ color: co }}>
-                            <p>Noises</p>{" "}
-                        </Link>
-                        <Link to="/wrongimage" style={{ color: co }}>
-                            <p>Wrong Image</p>{" "}
-                        </Link>
-                        <Link to="/wrongimageboard" style={{ color: co }}>
-                            <p>Wrong Image-Board</p>{" "}
-                        </Link>
-                        <Link to="/animatepetition" style={{ color: co }}>
-                            <p>Animate</p>{" "}
-                        </Link>
-                        <Link to="/mobileapps" style={{ color: co }}>
-                            <p>Mobile Apps</p>{" "}
-                        </Link>
+                        {projects.map((x) => {
+                            return x.name == "about" ? null : (
+                                <Link
+                                    to={`/${x.name}`}
+                                    key={x.name}
+                                    style={{ color: co }}
+                                >
+                                    <p>{x.title}</p>
+                                </Link>
+                            );
+                        })}
                     </div>
                 ) : null}
             </div>

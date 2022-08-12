@@ -37,6 +37,7 @@ a {
 }
 #header {
     height: 100vh;
+    min-height: 550px;
 }
 
 #board {
@@ -46,6 +47,7 @@ a {
 #projectPreview {
     width: 100vw;
     height: 100vh;
+    min-height: 550px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -136,14 +138,15 @@ p {
     text-align: center;
     margin-left: 150px;
     padding-left: 20px;
+    padding-right: 40px;
 }
 #pTitle {
     font-size: 30px;
 }
 
 #pTop {
-    width: 500px;
-    height: 500px;
+    width: 300px;
+    height: 300px;
     margin: 0;
     object-fit: scale-down;
 }
@@ -154,7 +157,8 @@ p {
 }
 #pDescription {
     padding-left: 20px;
-    font-size: 12px;
+    font-size: 14px;
+    text-align: justify;
 }
 
 #pImages {

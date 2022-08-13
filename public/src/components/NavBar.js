@@ -25,15 +25,33 @@ export default function NavBar({ idn, css }) {
                 </p>
 
                 {proj ? (
-                    <div id="pList">
+                    <div
+                        id="pList"
+                        style={{
+                            backgroundColor:
+                                window.innerWidth < 800 ? co : null,
+                            opacity: "80%",
+                        }}
+                    >
                         {projects.map((x) => {
                             return x.name == "about" ? null : (
                                 <Link
                                     to={`/${x.name}`}
                                     key={x.name}
-                                    style={{ color: co }}
+                                    style={{
+                                        color:
+                                            window.innerWidth < 800 ? bg : co,
+                                    }}
                                 >
-                                    <p>{x.title}</p>
+                                    <p
+                                        onClick={() => {
+                                            if (window.innerWidth < 800) {
+                                                toggle();
+                                            }
+                                        }}
+                                    >
+                                        {x.title}
+                                    </p>
                                 </Link>
                             );
                         })}

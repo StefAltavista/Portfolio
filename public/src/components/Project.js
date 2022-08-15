@@ -1,11 +1,17 @@
 import React from "react";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import NavBar from "./NavBar";
+
 const projects = require("../../../content.json");
 
 export default function Project({ name }) {
     console.log("PROJ", name);
     const project = projects.find((x) => x.name == name);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [useLocation()]);
 
     return (
         <div id="project">
@@ -34,11 +40,17 @@ export default function Project({ name }) {
                     </a>
                     <p id="pDescription">{project.description}</p>
                 </div>
-                {project.name != "about" && project.name != "mobileapps" ? (
-                    <a href={project.url} id="pLinkTo">
-                        Go to {project.title}
+
+                <div id="links">
+                    {project.name != "about" && project.name != "mobileapps" ? (
+                        <a href={project.url} id="pLinkTo">
+                            Visit Website
+                        </a>
+                    ) : null}
+                    <a href={project.gitHub} id="pLinkTo">
+                        Visit GitHub
                     </a>
-                ) : null}
+                </div>
 
                 <div id="pImages">
                     {project.images.map((x, i) =>

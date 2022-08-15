@@ -4,6 +4,7 @@
         "title": "Noises",
         "subtitle": "Social Network for promotes & event Calendar",
         "url": "https://petitionanimate.herokuapp.com/home",
+        "gitHub": "https://github.com/StefAltavista/noises",
         "images": [
             "/images/noises/Logo.png",
             "/images/noises/2.png",
@@ -22,7 +23,8 @@
         "name": "wrongimage",
         "title": "Wrong Image",
         "subtitle": "Image manipulator and NFT minter",
-        "url": "https://wrongimage.herokuapp.com/home",
+        "url": "https://wrongimage.herokuapp.com",
+        "gitHub": "https://github.com/StefAltavista/Wrong-Image",
         "images": [
             "/images/wrongimage/Logo.png",
             "/images/wrongimage/1.png",
@@ -41,7 +43,8 @@
         "name": "wrongimageboard",
         "title": "Wrong Image-Board",
         "subtitle": "Image Gallery",
-        "url": "https://wrongimage.herokuapp.com/home",
+        "url": "https://wimageboard.herokuapp.com",
+        "gitHub": "https://github.com/StefAltavista/imageBoard",
         "images": [
             "/images/wrongimageboard/Logo.png",
             "/images/wrongimageboard/2.png",
@@ -59,6 +62,7 @@
         "title": "Animate",
         "subtitle": "User based petition website with animations ",
         "url": "https://petitionanimate.herokuapp.com/home",
+        "gitHub": "https://github.com/StefAltavista/animate",
         "images": [
             "/images/animate/Logo.png",
             "/images/animate/1.png",
@@ -79,6 +83,7 @@
         "title": "Mobile Apps",
         "subtitle": "Collection of various IOs & Android mobile applications",
         "url": null,
+        "gitHub": "https://github.com/StefAltavista/React_Native",
         "images": ["/images/mobileapps/logo.png"],
         "background": "rgb(240, 196, 108)",
         "color": "rgb(0, 0, 0)",
@@ -91,6 +96,7 @@
         "title": "Contacts & About Stefano Mascitti Altavista",
         "subtitle": "Full-stack Web Developer",
         "url": "./",
+        "gitHub": "https://github.com/StefAltavista",
         "images": ["/images/about/Logo.png"],
         "background": "rgb(255, 85, 85)",
         "color": "rgb(0, 0, 0)",

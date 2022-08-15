@@ -167,6 +167,12 @@ p {
     font-size: 14px;
     text-align: justify;
 }
+#links {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+}
 
 #pImages {
     display: flex;

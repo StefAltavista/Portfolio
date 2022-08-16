@@ -1,19 +1,38 @@
 import React from "react";
 import { ReactP5Wrapper } from "react-p5-wrapper";
-import { Link } from "react-router-dom";
-import PerlinNoise from "../P5/perlinNoise.js";
+import WaveComplex from "../P5/WaveComplex.js";
+import WaveSimple from "../P5/WaveSimple.js";
 import ProjectPreview from "./ProjectPreview.js";
 import NavBar from "./NavBar.js";
 const projects = require("../../../content.json");
 
 export default function Home() {
-    console.log(projects);
+    console.log(navigator.userAgent);
+
     return (
         <>
             {" "}
             <div id="header">
                 <div id="background">
-                    <ReactP5Wrapper sketch={PerlinNoise} id="canvas" />
+                    {" "}
+                    {navigator.userAgent.includes("Chrome") ? (
+                        <ReactP5Wrapper sketch={WaveComplex} id="canvas" />
+                    ) : (
+                        <>
+                            <p
+                                style={{
+                                    fontSize: "8px",
+                                    height: "5px",
+                                    color: "white",
+                                    textAlign: "right",
+                                }}
+                            >
+                                Please use a different browser to unlock complex
+                                animation
+                            </p>
+                            <ReactP5Wrapper sketch={WaveSimple} id="canvas" />
+                        </>
+                    )}
                 </div>
                 <div id="sam">
                     <h3>Stefano Altavista Mascitti</h3>

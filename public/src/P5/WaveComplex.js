@@ -7,7 +7,7 @@ var start = 0;
 let h;
 let w;
 
-export default function PerlinNoise(p5) {
+export default function WaveComplex(p5) {
     function size() {
         if (window.innerHeight) {
             h = window.innerHeight;

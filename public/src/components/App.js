@@ -4,6 +4,11 @@ import Project from "./Project";
 import { HashRouter, Route, Routes } from "react-router-dom";
 
 export default function App() {
+    if (!navigator.userAgent.includes("Chrome")) {
+        alert(
+            "Welcome! \nPlease use a different browser to unlock complex animation"
+        );
+    }
     return (
         <div>
             <HashRouter>

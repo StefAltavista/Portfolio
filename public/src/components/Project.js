@@ -1,7 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { Link } from "react-router-dom";
 import NavBar from "./NavBar";
 
 const projects = require("../../../content.json");

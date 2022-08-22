@@ -100,7 +100,7 @@
         "images": ["/images/about/Logo.png"],
         "background": "rgb(255, 85, 85)",
         "color": "rgb(0, 0, 0)",
-        "tech": "With a background of Electronics and Information Technology S. Altavista Mascitti is today a Web and App developper with a higly creative and innovative drive.\nHis past studies in Telecomunication Systems and languages such as C, C++, Java, PHP), his recent study of Javascript and many associate libraries and frameworks, joined with his Artistic path as Musician and a Graphic designer makes him by every means a complete full stack web developper.",
+        "tech": "With a background in Electronics and Information Technology S.A.M. today is a Web and App developer with a highly creative and innovative drive. \n The past studies in Telecommunication Systems and languages such as C, C++, Java, PHP), the recent study of Javascript and many associate libraries and frameworks, joined with his Artistic path as Musician and a Graphic designer makes S by every means a complete full stack web developer.",
         "description": "Javascript - Typescript - SQL - Node.js - Express - React - React Native - Vue.js - Handlebars - P5js - C - Java - PHP",
         "development": "This portfolio website is a one page application created in Javascrip and React. It represents an overview of the last and most valuable project create by S.A.M. Some of them still active and in development some of them created for studying purpuses. "
     }

@@ -17,7 +17,7 @@
         "color": "rgb(0,0,0)",
         "tech": "Event Calendar, Personal account page, Event creator and manager, with notes archive and other features, also internal messenger and mailing list system",
         "description": "Noises was born as a social network for music labels, event organizers and promoter of the Berlin Noise, underground Techno and Experimental music scene. The aim of the network was to let oganizations comunicate, bound and collaborate more fluently, since this is often a delicate process. It was created during a programming bootcamp as an Excercise but then took more and more hape and became an official website. Noises is now also an onsubtitle calendar where users can very simply view the published events and organizers profile, withut the need of signing in. Its free Platform that promotes alternative and countercoulture. S.A.M. created this platform also to be used for his own Label Autonoma Industrile, as most of the event promotion platform are nowadays controlled by mediatic and commercial algorythms that as a matter of fact do not push for cultural development but anihilation of individuality for the subsitence and groth of a manipulated society.  Since there is big social movement in the realm of avantgarde, unconventional and extreme art Noises wants to give a voice to the underdogs, that have always been the foundation of our society and now need to reclaim their space.",
-        "development": "Javascript - React - Express - Node.js, SQL "
+        "development": "Javascript - React - Express - Node.js - SQL "
     },
     {
         "name": "wrongimage",
@@ -73,8 +73,8 @@
         ],
         "background": "rgb(141, 202, 255)",
         "color": "rgb(57, 50, 134)",
-        "tech": "Create Account, sign petition with Canvas, query database",
-        "description": "Animate is a studio project where users can create personal account and access a website of Petitions, in this case there is only one petition to sign: `Animate your Website`. A mehr silly theme where the creator suggest that every website should be animated by law. The twist comes in as the whole website is actually animated. Using only Vanilla Javascript S.A.M. created a 3D looking bubbleworld with a very aesthetic imprint that aims to actualy convice the suer that this is the `Right petition to sigh` ! ",
+        "tech": "Create and manage Personal account, digital signature, research filters, animated with only VanillaJS",
+        "description": "Animate is a studio project where users can create personal account and access a website of Petitions, in this case there is only one petition to sign: `Animate your Website`. A quite silly theme where the creator suggest that every website should be animated by law. \nThe twist comes in as the whole website is actually animated. Using only Vanilla Javascript S.A.M. created a 3D looking bubbleworld with a very aesthetic imprint that aims to actualy convice the suer that this is the `Right petition to sign` ! ",
         "development": "Javascript - Handlebars - Express - Node.js, Canvas, SQL "
     },
 
@@ -100,8 +100,8 @@
         "images": ["/images/about/Logo.png"],
         "background": "rgb(255, 85, 85)",
         "color": "rgb(0, 0, 0)",
-        "tech": "Javascrip - Typescript - SQL - Node.js - Express - React - React Native - Vue.js - Handlebars - P5js - C - Java - PHP",
-        "description": "Short Bio",
-        "development": "This portfolio website is a one page application created in Javascrip with React. It represents an overview of my last and most valuable project, some of them still active and in development some of them created for studying purpuses. "
+        "tech": "With a background of Electronics and Information Technology S. Altavista Mascitti is today a Web and App developper with a higly creative and innovative drive.\nHis past studies in Telecomunication Systems and languages such as C, C++, Java, PHP), his recent study of Javascript and many associate libraries and frameworks, joined with his Artistic path as Musician and a Graphic designer makes him by every means a complete full stack web developper.",
+        "description": "Javascript - Typescript - SQL - Node.js - Express - React - React Native - Vue.js - Handlebars - P5js - C - Java - PHP",
+        "development": "This portfolio website is a one page application created in Javascrip and React. It represents an overview of the last and most valuable project create by S.A.M. Some of them still active and in development some of them created for studying purpuses. "
     }
 ]

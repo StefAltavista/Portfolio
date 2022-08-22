@@ -9,6 +9,8 @@ const projects = require("../../../content.json");
 export default function Project({ name }) {
     console.log("PROJ", name);
     const project = projects.find((x) => x.name == name);
+    const newline = (x) => x.split("\n").map((str, i) => <p key={i}>{str}</p>);
+    console.log(project.tech);
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [useLocation()]);
@@ -38,9 +40,10 @@ export default function Project({ name }) {
                     <a href={project.url} target="blank">
                         <img src={project.images[0]} id="pTop" />
                     </a>
-                    <p id="pDescription">{project.description}</p>
+                    <div id="tech">{newline(project.tech)}</div>
+                    <div id="pDescription">{newline(project.description)}</div>
+                    <div id="dev">{newline(project.development)}</div>{" "}
                 </div>
-
                 <div id="links">
                     {project.name != "about" && project.name != "mobileapps" ? (
                         <a href={project.url} id="pLinkTo">

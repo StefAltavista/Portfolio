@@ -39,8 +39,8 @@ export default function Project({ name }) {
                     <a href={project.url} target="blank">
                         <img src={project.images[0]} id="pTop" />
                     </a>
-                    <div id="tech">{newline(project.tech)}</div>
                     <div id="pDescription">{newline(project.description)}</div>
+                    <div id="tech">{newline(project.tech)}</div>
                     <div id="dev">{newline(project.development)}</div>{" "}
                 </div>
                 <div id="links">

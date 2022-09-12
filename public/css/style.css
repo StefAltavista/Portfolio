@@ -25,7 +25,7 @@ a {
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
         "Lucida Sans", Arial, sans-serif;
     display: flex;
-
+    min-height: 550px;
     flex-wrap: wrap;
 }
 #sam h3 {
@@ -242,6 +242,10 @@ p {
         margin: 20px;
         width: 300px;
         object-fit: scale-down;
+    }
+    #projLogo {
+        width: 150px;
+        height: 1500px;
     }
 }
 @media only screen and (max-width: 450px) {

@@ -249,9 +249,7 @@ p {
         height: 150px;
     }
     #projectPreview {
-        width: 700vw;
+        width: 70vw;
         height: 70vh;
     }
-}
-@media only screen and (max-width: 450px) {
 }

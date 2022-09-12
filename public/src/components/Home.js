@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { ReactP5Wrapper } from "react-p5-wrapper";
 import WaveComplex from "../P5/WaveComplex.js";
 import WaveSimple from "../P5/WaveSimple.js";
@@ -49,7 +50,9 @@ export default function Home() {
                     )}
                 </div>
                 <div id="sam">
-                    <h3>Stefano Altavista Mascitti</h3>
+                    <Link to={`./about`}>
+                        <h3>Stefano Altavista Mascitti</h3>
+                    </Link>
 
                     <p>
                         Continuous Creative Development <br></br> Full-Stack

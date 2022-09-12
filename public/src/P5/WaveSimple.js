@@ -45,7 +45,7 @@ export default function WaveSimple(p5) {
         // }
 
         //    perlinWorm(p5, w, h);
-        p5.background(180, 140, 54);
+        p5.background(20, 145, 60);
         perlinScope(p5, w, h);
     };
 }

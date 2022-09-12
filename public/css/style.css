@@ -51,13 +51,14 @@ a {
 
 #projectPreview {
     position: relative;
-    top: 100vh;
-    width: 50vw;
+    top: max(100vh, 550px);
+    width: 70vw;
     height: 50vh;
     min-height: 550px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
     align-items: center;
     cursor: default;
     transition: 500ms;
@@ -189,7 +190,7 @@ p {
 }
 
 #pImg {
-    border: 1px solid rgb(255, 255, 255);
+    border: 1px solid rgb(120, 243, 95);
     margin: 20px;
     width: 500px;
     object-fit: scale-down;
@@ -245,7 +246,11 @@ p {
     }
     #projLogo {
         width: 150px;
-        height: 1500px;
+        height: 150px;
+    }
+    #projectPreview {
+        width: 700vw;
+        height: 70vh;
     }
 }
 @media only screen and (max-width: 450px) {

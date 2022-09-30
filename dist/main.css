@@ -4,7 +4,6 @@
 body {
     margin: 0;
     margin-left: 2px;
-
     background-color: rgb(0, 0, 0);
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
         "Lucida Sans", Arial, sans-serif;
@@ -15,6 +14,7 @@ a {
     font-family: "Trebuchet MS";
 }
 
+/* ------------------------------HOME---------------------------*/
 #sam a {
     color: rgb(141, 202, 255);
 }
@@ -25,6 +25,7 @@ a {
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
         "Lucida Sans", Arial, sans-serif;
     display: flex;
+    min-height: 550px;
     flex-wrap: wrap;
 }
 #sam h3 {
@@ -35,45 +36,33 @@ a {
     font-size: 20px;
     margin-left: 20px;
 }
-#header {
+#background {
     height: 100vh;
     min-height: 550px;
+    position: fixed;
 }
 
 #board {
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #projectPreview {
-    width: 100vw;
-    height: 100vh;
+    position: relative;
+    top: max(100vh, 550px);
+    width: 70vw;
+    height: 50vh;
     min-height: 550px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
     align-items: center;
     cursor: default;
     transition: 500ms;
-}
-#head {
-    display: flex;
-    flex-direction: column;
-}
-#head h3 {
-    font-size: 35px;
-}
-#head p {
-    font-size: 15px;
-}
-
-#projLogo {
-    width: 200px;
-    height: 200px;
-    margin: 30px;
-    border: 1px solid white;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 100);
-    cursor: pointer;
+    margin-bottom: 100px;
 }
 
 #navbar {
@@ -104,6 +93,29 @@ p {
 #navbar:hover {
     left: 0;
     opacity: 100%;
+}
+
+/* ------------------------------PROJECT---------------------------*/
+
+#head {
+    display: flex;
+    flex-direction: column;
+}
+#head h3 {
+    font-size: 35px;
+}
+#head p {
+    font-size: 15px;
+}
+
+#projLogo {
+    width: 200px;
+    height: 200px;
+    margin: 30px;
+    border: 1px solid white;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 100);
+    cursor: pointer;
 }
 
 #appear {
@@ -139,6 +151,9 @@ p {
     margin-left: 150px;
     padding-left: 20px;
     padding-right: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #pTitle {
     font-size: 30px;
@@ -154,11 +169,18 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 14px;
 }
 #pDescription {
     padding-left: 20px;
-    font-size: 14px;
+
     text-align: justify;
+}
+#links {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
 }
 
 #pImages {
@@ -168,10 +190,67 @@ p {
 }
 
 #pImg {
-    border: 1px solid rgb(255, 255, 255);
+    border: 1px solid rgb(120, 243, 95);
     margin: 20px;
     width: 500px;
-
     object-fit: scale-down;
+}
+
+@media only screen and (max-width: 800px) {
+    body {
+        margin: 0;
+        width: 100vw;
+        position: absolute;
+    }
+    #appear {
+        height: 50px;
+        width: 100vw;
+        padding-top: 0px;
+        padding-left: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    #projBody {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 50px;
+        padding-left: 20px;
+
+        padding-right: 20px;
+    }
+    #pList p {
+        margin: 0;
+        padding: 15px;
+    }
+    #pList {
+        width: 100%;
+        background-color: rgb(190, 190, 190);
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        left: 0;
+        padding: 0;
+        height: auto;
+    }
+    #pDescription {
+        padding-left: 0px;
+    }
+
+    #pImg {
+        margin: 20px;
+        width: 300px;
+        object-fit: scale-down;
+    }
+    #projLogo {
+        width: 150px;
+        height: 150px;
+    }
+    #projectPreview {
+        width: 70vw;
+        height: 70vh;
+    }
 }
 

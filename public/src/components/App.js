@@ -4,6 +4,7 @@ import Project from "./Project";
 import { HashRouter, Route, Routes } from "react-router-dom";
 
 export default function App() {
+    const projects = require("../../../content.json");
     if (!navigator.userAgent.includes("Chrome")) {
         console.log(navigator.userAgent);
 
@@ -18,38 +19,14 @@ export default function App() {
             <HashRouter>
                 <Routes>
                     <Route exact path="/" element={<Home />}></Route>
-
-                    <Route
-                        exact
-                        path="/noises"
-                        element={<Project name="noises" />}
-                    ></Route>
-
-                    <Route
-                        exact
-                        path="/animate"
-                        element={<Project name="animate" />}
-                    ></Route>
-                    <Route
-                        exact
-                        path="/wrongimage"
-                        element={<Project name="wrongimage" />}
-                    ></Route>
-                    <Route
-                        exact
-                        path="/wrongimageboard"
-                        element={<Project name="wrongimageboard" />}
-                    ></Route>
-                    <Route
-                        exact
-                        path="/mobileapps"
-                        element={<Project name="mobileapps" />}
-                    ></Route>
-                    <Route
-                        exact
-                        path="/about"
-                        element={<Project name="about" />}
-                    ></Route>
+                    {projects.map((x) => (
+                        <Route
+                            exact
+                            path={"/" + x.name}
+                            element={<Project name={x.name} />}
+                            key={"/" + x.name}
+                        ></Route>
+                    ))}
                 </Routes>
             </HashRouter>
         </div>

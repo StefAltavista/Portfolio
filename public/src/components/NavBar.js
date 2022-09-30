@@ -1,10 +1,12 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 
-export default function NavBar({ idn, css }) {
-    const [proj, setProj] = useState(false);
+export default function NavBar({ options }) {
+    const { idn, css, projectMenu, projectMenuBG } = options;
+    const [proj, setProj] = useState(projectMenu);
     const projects = require("../../../content.json");
+    const projMenu = useRef();
     const toggle = () => {
         setProj(!proj);
     };
@@ -14,11 +16,24 @@ export default function NavBar({ idn, css }) {
 
     console.log(idn);
     return (
-        <div id={idn} style={{ backgroundColor: bg }}>
-            <Link to="/" style={{ color: co }}>
-                <p>Home</p>{" "}
-            </Link>
-
+        <div id={idn} style={{ background: bg, letterSpacing: "2px" }}>
+            {options.home ? (
+                <>
+                    <Link to="/" style={{ color: co }}>
+                        <p>Home</p>{" "}
+                    </Link>
+                </>
+            ) : (
+                <>
+                    <p
+                        onClick={() =>
+                            window.scrollTo({ top: 0, behavior: "smooth" })
+                        }
+                    >
+                        Stefano<br></br>Altavista<br></br>Mascitti<br></br>
+                    </p>
+                </>
+            )}
             <div id="menuProjects">
                 <p onClick={toggle} style={{ color: co }}>
                     Projects
@@ -27,11 +42,12 @@ export default function NavBar({ idn, css }) {
                 {proj ? (
                     <div
                         id="pList"
-                        style={{
-                            backgroundColor:
-                                window.innerWidth < 800 ? co : null,
-                            opacity: "80%",
-                        }}
+                        style={
+                            projectMenuBG
+                                ? { background: bg }
+                                : { background: "rgb(0,0,0,0)" }
+                        }
+                        ref={projMenu}
                     >
                         {projects.map((x) => {
                             return x.name == "about" ? null : (
@@ -39,8 +55,7 @@ export default function NavBar({ idn, css }) {
                                     to={`/${x.name}`}
                                     key={x.name}
                                     style={{
-                                        color:
-                                            window.innerWidth < 800 ? bg : co,
+                                        color: co,
                                     }}
                                 >
                                     <p
@@ -59,7 +74,7 @@ export default function NavBar({ idn, css }) {
                 ) : null}
             </div>
             <Link to="/about" style={{ color: co }}>
-                <p>About S.A.M.</p>{" "}
+                <p>About</p>{" "}
             </Link>
         </div>
     );

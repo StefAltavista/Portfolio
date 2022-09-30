@@ -19,14 +19,31 @@ a {
     color: rgb(141, 202, 255);
 }
 #sam {
-    position: absolute;
+    left: 0px;
+    position: fixed;
     top: 0%;
     color: rgb(141, 202, 255);
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-        "Lucida Sans", Arial, sans-serif;
     display: flex;
     min-height: 550px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+}
+#projectsTitle {
+    z-index: 1;
+    position: fixed;
+    top: -2%;
+    left: -100%;
+    background-color: rgb(0, 0, 0);
+    color: rgb(141, 202, 255);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    letter-spacing: 3px;
+    height: 100%;
+    width: auto;
+    font-size: 20px;
+    padding: 10px;
 }
 #sam h3 {
     font-size: 80px;
@@ -50,10 +67,11 @@ a {
 }
 
 #projectPreview {
+    transform: translateX(70px);
     position: relative;
-    top: max(100vh, 550px);
-    width: 70vw;
-    height: 50vh;
+    top: max(150vh, 550px);
+    width: 50vw;
+    height: 30vh;
     min-height: 550px;
     display: flex;
     flex-direction: column;
@@ -65,34 +83,31 @@ a {
     margin-bottom: 100px;
 }
 
-#navbar {
+#navBarScroll {
+    left: -100%;
     position: fixed;
+    opacity: 0%;
+    z-index: 2;
+}
+#navBar {
+    opacity: inherit;
     top: 0;
-    left: -149px;
+    left: -1%;
     height: 100vh;
-    width: 150px;
+    width: 170px;
     padding: 20px;
-    padding-left: 30px;
+    padding-left: 20px;
     display: flex;
     flex-direction: column;
-    opacity: 0%;
     transition: 1s;
 }
-#navbar a,
+#navBar a,
 p {
     color: none;
 }
-#navbar p:hover {
+#navBar p:hover {
     color: rgb(96, 105, 172);
     cursor: pointer;
-}
-#navbar div div p {
-    padding-left: 20px;
-}
-
-#navbar:hover {
-    left: 0;
-    opacity: 100%;
 }
 
 /* ------------------------------PROJECT---------------------------*/
@@ -122,7 +137,7 @@ p {
     position: fixed;
     background-color: rgb(170, 105, 105);
     height: 100vh;
-    width: 150px;
+    width: 170px;
     padding-top: 20px;
     padding-left: 20px;
     display: flex;
@@ -136,8 +151,10 @@ p {
 }
 
 #pList {
+    position: relative;
     font-size: 14px;
     padding-left: 20px;
+    transition: 1s;
 }
 
 #project {
@@ -216,24 +233,25 @@ p {
         margin-left: 0;
         margin-top: 50px;
         padding-left: 20px;
-
         padding-right: 20px;
     }
     #pList p {
         margin: 0;
         padding: 15px;
     }
-    #pList {
-        width: 100%;
-        background-color: rgb(190, 190, 190);
+    #appear #pList {
+        top: 50px;
+        border: 1px solid black;
+        width: 102vw;
         position: absolute;
         display: flex;
         flex-direction: row;
         justify-content: center;
         flex-wrap: wrap;
-        left: 0;
+        left: -1px;
         padding: 0;
         height: auto;
+        margin: 0;
     }
     #pDescription {
         padding-left: 0px;
@@ -249,7 +267,13 @@ p {
         height: 150px;
     }
     #projectPreview {
-        width: 70vw;
-        height: 70vh;
+        width: 60vw;
+        height: 60vh;
+    }
+
+    #navBar {
+        height: 100vh;
+        width: 30%;
+        padding-left: 20px;
     }
 }

@@ -17,10 +17,15 @@ export default function Project({ name }) {
     return (
         <div id="project">
             <NavBar
-                idn="appear"
-                css={{
-                    backgroundColor: project.background,
-                    color: project.color,
+                options={{
+                    home: true,
+                    projectMenu: false,
+                    projectMenuBG: true,
+                    idn: "appear",
+                    css: {
+                        backgroundColor: project.background,
+                        color: project.color,
+                    },
                 }}
             />
             <div

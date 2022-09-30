@@ -7,7 +7,9 @@ export default function ProjectPreview({ project }) {
                 <div
                     id="projectPreview"
                     style={{
-                        backgroundColor: project.background,
+                        background: project.background
+                            .replace("rgb", "rgba")
+                            .replace(")", ",0.8)"),
                         color: project.color,
                     }}
                 >

@@ -40,6 +40,19 @@
         "development": "Javascript - React - Express - Node.js - P5JS - PostgreSQL"
     },
     {
+        "name": "ultraviolet",
+        "title": "Ultraviolet",
+        "subtitle": "Web Synthesizer",
+        "url": "https://ultraviolet-synth.herokuapp.com",
+        "gitHub": "https://github.com/StefAltavista/ultraviolet",
+        "images": ["/images/ultraviolet/Logo.png", "/images/ultraviolet/1.png"],
+        "background": "rgb(200, 100, 100)",
+        "color": "rgb(0, 0, 0)",
+        "tech": "Press play, make a sequence, add effects and start tweeking to generate a various spectrum of sounds.",
+        "description": "One page application Digital Synthesizer. Includes an FM Oscillator connected to an envelope generator and controlled by a step sequencer. Sequencer controls Frequency and triggers the ADSR, with adjustable number of steps. The sound gets routed through an effect rack with several selectable FX. \n Developped with Tone.js and React ",
+        "development": "Javascript - React - Tone.js - AudioContext"
+    },
+    {
         "name": "wrongimageboard",
         "title": "Wrong Image-Board",
         "subtitle": "Image Gallery",
@@ -53,8 +66,8 @@
         "background": "rgb(108, 240, 117)",
         "color": "rgb(0, 0, 0)",
         "tech": "Upload Picture on a personal wall, Leave comments, infinite scroll",
-        "description": "Conceptually connected to Wrong Image, this ImageBoard is a simple one page application created in Vue.Js. The user can upload pictures on a personal dashboard, leave comments and delete pictures previously stored on the Amazon Database via S3.",
-        "development": "Javascript - VUEJS - Express - Node.js - PostgreSQL"
+        "description": "Conceptually connected to Wrong Image, this ImageBoard is a simple one page application created in Vue.Js. The user can upload pictures on a personal dashboard, leave comments and delete pictures previously stored on AWS.",
+        "development": "Javascript - VUEJS - Express - Node.js - PostgreSQL - AWS"
     },
 
     {

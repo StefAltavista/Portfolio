@@ -51,6 +51,17 @@ export default function () {
                         {!result ? (
                             <div>
                                 <div className="field">
+                                    <p>E-Mail address</p>
+                                    <input
+                                        type="text"
+                                        name="email"
+                                        value={email}
+                                        onChange={(e) =>
+                                            setEmail(e.target.value)
+                                        }
+                                    ></input>
+                                </div>
+                                <div className="field">
                                     <p>Object</p>
                                     <input
                                         type="text"
@@ -71,17 +82,7 @@ export default function () {
                                         }
                                     ></textarea>
                                 </div>
-                                <div className="field">
-                                    <p>E-Mail address</p>
-                                    <input
-                                        type="text"
-                                        name="email"
-                                        value={email}
-                                        onChange={(e) =>
-                                            setEmail(e.target.value)
-                                        }
-                                    ></input>
-                                </div>
+
                                 <button
                                     type="submit"
                                     onClick={(e) => {
@@ -89,12 +90,15 @@ export default function () {
                                         sendMessage(e);
                                     }}
                                 >
-                                    Send Message To Stefano
+                                    Send
                                 </button>
                             </div>
                         ) : (
                             <p>{result}</p>
                         )}
+                        <a href="mailto:altavista.stef@gmail.com">
+                            Direct mail
+                        </a>
                     </form>
                 </div>
             </div>

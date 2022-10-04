@@ -3,9 +3,9 @@ let EMAIL_TO;
 let EMAIL_FROM;
 
 if (process.env.NODE_ENV == "production") {
-    EMAIL_TO = process.env.SESSION_SECRET;
-    EMAIL_FROM = process.env.SESSION_SECRET;
-    EMAIL_PASS = process.env.SESSION_SECRET;
+    EMAIL_TO = process.env.EMAIL_TO;
+    EMAIL_FROM = process.env.EMAIL_FROM;
+    EMAIL_PASS = process.env.EMAIL_PASS;
 } else {
     EMAIL_TO = require("./config.json").EMAIL_TO;
     EMAIL_FROM = require("./config.json").EMAIL_FROM;

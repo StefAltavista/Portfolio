@@ -1,19 +1,26 @@
 const nodemailer = require("nodemailer");
+let EMAIL_TO;
+let EMAIL_FROM;
 
-const receiver = require("./config.json").EMAIL_TO;
-const sender = require("./config.json").EMAIL_FROM;
-const pass = require("./config.json").EMAIL_PASS;
-
+if (process.env.NODE_ENV == "production") {
+    EMAIL_TO = process.env.SESSION_SECRET;
+    EMAIL_FROM = process.env.SESSION_SECRET;
+    EMAIL_PASS = process.env.SESSION_SECRET;
+} else {
+    EMAIL_TO = require("./config.json").EMAIL_TO;
+    EMAIL_FROM = require("./config.json").EMAIL_FROM;
+    EMAIL_PASS = require("./config.json").EMAIL_PASS;
+}
 const transporter = nodemailer.createTransport({
     service: "hotmail",
-    auth: { user: sender, pass: pass },
+    auth: { user: EMAIL_FROM, pass: EMAIL_PASS },
 });
 
 const sendMessage = (message) => {
     return new Promise((resolve, reject) => {
         const options = {
-            from: sender,
-            to: receiver,
+            from: EMAIL_FROM,
+            to: EMAIL_TO,
             subject: "MESSAGE FROM PORTFOLIO PAGE",
             html: message,
         };

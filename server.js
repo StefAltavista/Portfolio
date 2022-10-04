@@ -1,7 +1,12 @@
 const path = require("path");
 const express = require("express");
 const { sendMessage } = require("./sendMessage");
-const validate = require("./config.json").TOKEN;
+let TOKEN;
+if (process.env.NODE_ENV == "production") {
+    TOKEN = process.env.SESSION_SECRET;
+} else {
+    TOKEN = require("./config.json").TOKEN;
+}
 var app = express();
 
 app.use(express.static(path.join(__dirname, "dist")));
@@ -9,9 +14,9 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());
 
 app.post("/api/contact", (req, res) => {
-    const { message, token } = req.body;
+    const { message, code } = req.body;
 
-    if (token == validate) {
+    if (code == TOKEN) {
         sendMessage(message)
             .then(({ e, info, result }) => {
                 res.json({
@@ -24,7 +29,7 @@ app.post("/api/contact", (req, res) => {
                 console.log("Server ERROR:", e);
                 res.json({ e, info, result });
             });
-    } else res.json({ e: "not validated" });
+    } else res.json({ e: "Not Validated" });
 });
 
 app.set("port", process.env.PORT || 7001);

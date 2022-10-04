@@ -1,13 +1,6 @@
 import React, { useState } from "react";
 import Background from "./Background";
 import NavBar from "./NavBar";
-let TOKEN;
-if (process.env.NODE_ENV == "production") {
-    TOKEN = process.env.SESSION_SECRET;
-} else {
-    TOKEN = require("../../../config.json").TOKEN;
-    console.log("else front");
-}
 
 export default function () {
     const [object, setObject] = useState("");
@@ -25,7 +18,7 @@ export default function () {
         fetch("/api/contact", {
             headers: { "Content-type": "application/json" },
             method: "POST",
-            body: JSON.stringify({ message, code: TOKEN }),
+            body: JSON.stringify({ message }),
         })
             .then((res) => res.json())
             .then(({ result }) => {

@@ -16,6 +16,15 @@ module.exports = {
         new HTMLwebpackPlugin({ template: "./public/src/index.html" }),
         new MiniCssExtractPlugin(),
     ],
+    devServer: {
+        static: path.join(__dirname, "public"),
+        proxy: {
+            "/": {
+                target: "http://localhost:7001",
+            },
+        },
+        port: "7000",
+    },
 
     module: {
         rules: [

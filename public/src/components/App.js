@@ -1,6 +1,7 @@
 import React from "react";
 import Home from "./Home";
 import Project from "./Project";
+import Contact from "./Contact";
 import { HashRouter, Route, Routes } from "react-router-dom";
 
 export default function App() {
@@ -27,6 +28,7 @@ export default function App() {
                             key={"/" + x.name}
                         ></Route>
                     ))}
+                    <Route exact path="/contact" element={<Contact />}></Route>
                 </Routes>
             </HashRouter>
         </div>

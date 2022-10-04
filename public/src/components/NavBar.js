@@ -14,7 +14,6 @@ export default function NavBar({ options }) {
     const bg = css.backgroundColor;
     const co = css.color;
 
-    console.log(idn);
     return (
         <div id={idn} style={{ background: bg, letterSpacing: "2px" }}>
             {options.home ? (
@@ -75,6 +74,9 @@ export default function NavBar({ options }) {
             </div>
             <Link to="/about" style={{ color: co }}>
                 <p>About</p>{" "}
+            </Link>
+            <Link to="/contact" style={{ color: co }}>
+                <p>Contact</p>{" "}
             </Link>
         </div>
     );

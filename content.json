@@ -95,7 +95,7 @@
         "name": "mobileapps",
         "title": "Mobile Apps",
         "subtitle": "Collection of various IOs & Android mobile applications",
-        "url": null,
+        "url": "https://github.com/StefAltavista/React_Native",
         "gitHub": "https://github.com/StefAltavista/React_Native",
         "images": ["/images/mobileapps/logo.png"],
         "background": "rgb(240, 196, 108)",

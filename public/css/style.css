@@ -1,5 +1,11 @@
 * {
     box-sizing: border-box;
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+}
+
+*::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
 }
 body {
     margin: 0;
@@ -12,6 +18,27 @@ a {
     color: rgb(74, 81, 133);
     text-decoration: none;
     font-family: "Trebuchet MS";
+}
+#alert {
+    font-family: "Courier New", Courier, monospace;
+    color: rgb(0, 0, 0);
+    z-index: 3;
+    /* border: 1px solid rgb(0, 0, 0); */
+    /* border-radius: 20px; */
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    position: absolute;
+    width: 200px;
+    height: 220px;
+    margin-left: 40vw;
+    margin-top: 30vh;
+}
+#close {
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    right: 10px;
+    top: -10px;
+    cursor: pointer;
 }
 
 /* ------------------------------HOME---------------------------*/
@@ -88,6 +115,7 @@ a {
     position: fixed;
     opacity: 0%;
     z-index: 2;
+    overflow: scroll;
 }
 #navBar {
     opacity: inherit;
@@ -157,6 +185,9 @@ p {
     font-size: 14px;
     padding-left: 20px;
     transition: 1s;
+}
+#pList p {
+    padding-top: 10px;
 }
 
 #project {
@@ -314,6 +345,9 @@ p {
     #navBar {
         height: 100vh;
         width: 30%;
-        padding-left: 20px;
+        padding-left: 5px;
+    }
+    #pList {
+        padding-left: 5px;
     }
 }

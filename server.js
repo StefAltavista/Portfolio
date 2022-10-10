@@ -1,8 +1,9 @@
 const path = require("path");
 const express = require("express");
 const { sendMessage } = require("./sendMessage");
+
 var app = express();
-console.log("Back", process);
+
 app.use(express.static(path.join(__dirname, "dist")));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());

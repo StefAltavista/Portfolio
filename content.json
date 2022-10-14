@@ -1,25 +1,5 @@
 [
     {
-        "name": "noises",
-        "title": "Noises",
-        "subtitle": "Social Network for promoters & event Calendar",
-        "url": "/",
-        "gitHub": "https://github.com/StefAltavista/noises",
-        "images": [
-            "/images/noises/Logo.png",
-            "/images/noises/2.png",
-            "/images/noises/3.png",
-            "/images/noises/4.png",
-            "/images/noises/5.png",
-            "/images/noises/1.png"
-        ],
-        "background": "rgb(108, 126, 240)",
-        "color": "rgb(0,0,0)",
-        "tech": "Event Calendar, Personal account page, Event creator and manager, with notes archive and other features, also internal messenger and mailing list system",
-        "description": "Noises was born as a social network for music labels, event organizers and promoters of the Berlin Noise, underground Techno and Experimental music scene. The aim of the network was to let oganizations comunicate, connect and collaborate more fluently, since this is often a delicate process. Noises is now also an online calendar where users can view published events and organizers profiles without the need of signing in. It's a free Platform that promotes alternative and countercoulture. S.A.M. created this platform to be used for his own Label Autonoma Industrile, as most of the current event promotion platforms are controlled by mediatic and commercial algorythms that do not push for cultural development but instead for the anihilation of individuality and for the subsitence and growth of a manipulated society. Since there is a big social movement in the realm of avantgarde, unconventional and extreme art, Noises wants to give a voice to the underdogs that have always been the foundation of our society and now need to reclaim their space. \n S.A.M has put together a team to further develope this platform, and it will soon be launched.",
-        "development": "Javascript - React - Express - Node.js - PostgreSQL "
-    },
-    {
         "name": "wrongimage",
         "title": "Wrong Image",
         "subtitle": "Image manipulator and NFT minter",
@@ -40,6 +20,26 @@
         "development": "Javascript - React - Express - Node.js - P5JS - PostgreSQL"
     },
     {
+        "name": "noises",
+        "title": "Noises",
+        "subtitle": "Social Network for promoters & event Calendar",
+        "url": "/",
+        "gitHub": "https://github.com/StefAltavista/noises",
+        "images": [
+            "/images/noises/Logo.png",
+            "/images/noises/2.png",
+            "/images/noises/3.png",
+            "/images/noises/4.png",
+            "/images/noises/5.png",
+            "/images/noises/1.png"
+        ],
+        "background": "rgb(108, 126, 240)",
+        "color": "rgb(0,0,0)",
+        "tech": "Event Calendar, Personal account page, Event creator and manager, with notes archive and other features, also internal messenger and mailing list system - (UNDER PROCESSING)",
+        "description": "Noises was born as a social network for music labels, event organizers and promoters of the Berlin Noise, underground Techno and Experimental music scene. The aim of the network was to let oganizations comunicate, connect and collaborate more fluently, since this is often a delicate process. Noises is now also an online calendar where users can view published events and organizers profiles without the need of signing in. It's a free Platform that promotes alternative and countercoulture. S.A.M. created this platform to be used for his own Label Autonoma Industrile, as most of the current event promotion platforms are controlled by mediatic and commercial algorythms that do not push for cultural development but instead for the anihilation of individuality and for the subsitence and growth of a manipulated society. Since there is a big social movement in the realm of avantgarde, unconventional and extreme art, Noises wants to give a voice to the underdogs that have always been the foundation of our society and now need to reclaim their space. \n S.A.M has put together a team to further develope this platform, and it will soon be launched.",
+        "development": "Javascript - React - Express - Node.js - PostgreSQL "
+    },
+    {
         "name": "ultraviolet",
         "title": "Ultraviolet",
         "subtitle": "Web Synthesizer",
@@ -48,7 +48,7 @@
         "images": ["/images/ultraviolet/Logo.png", "/images/ultraviolet/1.png"],
         "background": "rgb(200, 100, 100)",
         "color": "rgb(0, 0, 0)",
-        "tech": "Press play, make a sequence, add effects and start tweeking to generate a various spectrum of sounds.",
+        "tech": "Press play, make a sequence, add effects and start tweeking to generate a various spectrum of sounds - (UNDER PROCESSING)",
         "description": "One page application Digital Synthesizer. Includes an FM Oscillator connected to an envelope generator and controlled by a step sequencer. Sequencer controls Frequency and triggers the ADSR, with adjustable number of steps. The sound gets routed through an effect rack with several selectable FX. \n Developped with Tone.js and React ",
         "development": "Javascript - React - Tone.js - AudioContext"
     },

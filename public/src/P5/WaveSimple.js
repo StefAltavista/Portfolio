@@ -30,61 +30,31 @@ export default function WaveSimple(p5) {
     p5.setup = () => {
         p5.createCanvas(w, h);
         p5.pixelDensity(1);
+        p5.frameRate(30);
     };
 
     window.onresize = () => {
         size();
     };
     p5.draw = () => {
-        // p5.mousePressed = () => {
-        //     p5.noLoop();
-        // };
+        // p5.background(45, 193, 92); Green
+        // p5.background(201, 131, 62); Orange
+        p5.background(62, 92, 201);
 
-        // for (let i = 0; i < 3000; i++) {
-        //     perlinWorm(p5);
-        // }
-
-        //    perlinWorm(p5, w, h);
-        p5.background(20, 145, 60);
         perlinScope(p5, w, h);
     };
 }
 
-function perlinWorm(p5, w, h) {
-    var x = p5.noise(xoff1, xoff1) * w;
-    var y = p5.noise(xoff2, xoff2) * h;
-    var z = p5.noise(y) * 50;
-    xoff1 += 0.005;
-    xoff2 += 0.005;
-
-    start++;
-    p5.stroke(p5.color(x / (Math.random() * x), y / 8, z * 5));
-
-    p5.noFill();
-    p5.rect(x, y, x / 7, y / 7);
-    // }
-}
-
 function perlinScope(p5) {
-    // p5.stroke(255);
-
     p5.beginShape();
     var xoff1 = start;
     for (var x = 0; x < w / 2; x++) {
-        // let color = p5.color(
-        //     p5.noise(xoff1) * 250,
-        //     p5.noise(xoff1 + 1000) * 250,
-        //     p5.noise(xoff1 + 150) * 250
-        // );
         p5.stroke(0);
-
         p5.noFill();
         p5.vertex(x, p5.noise(xoff1) * h);
-
         xoff1 += inc;
     }
 
     p5.endShape();
-
     start += inc;
 }

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Home from "./Home";
 import Project from "./Project";
 import Contact from "./Contact";
+
 import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
 
 export default function App() {

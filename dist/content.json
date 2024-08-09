@@ -1,5 +1,18 @@
 [
     {
+        "name": "about",
+        "title": "About S.A.M. ",
+        "subtitle": "Full-stack Web Developer",
+        "url": "./",
+        "gitHub": "https://github.com/StefAltavista",
+        "images": ["/images/about/Logo.png"],
+        "background": "rgb(255, 85, 85)",
+        "color": "rgb(0, 0, 0)",
+        "tech": "",
+        "description": "With a background in Electronics and Information Technology Stefano Altavista Mascitti is a Web and App developer with a highly creative and innovative drive. The past studies in Telecommunication Systems and languages such as C, C++, Java, PHP), the recent study of Javascript and many associate libraries and frameworks, joined with his artistic path as Musician and a Graphic designer makes S.A.M by every means a complete full stack web developer.",
+        "development": "Javascript - Typescript - Node.js - Express - React - React Native - Vue.js - Handlebars - P5js - SQL - C - Java - PHP - NginX - Linux"
+    },
+    {
         "name": "wrongimage",
         "title": "Wrong Image",
         "subtitle": "Image manipulator and NFT minter",
@@ -16,8 +29,26 @@
         "background": "rgb(0, 0, 0)",
         "color": "rgb(150, 240, 167)",
         "tech": "Access via Metamask personal wallet, create and manipulate images, store on IPFS, mint NFT ",
-        "description": "Within the realm of Web3: Wrong Image is a Glitch Art Generator and NFT minter based on P5js. There are 7 different algorithms, each of which has their own parameters that allow the user to manipulate and blend pictures of multiple formats. The finalized image can be downloaded or stored on the IPFS (Inter Planetary File System) the industrial standard for NFT storage. Once the picture is saved the user can access his own gallery, and mint each of those immages into the Polygon chain. With the aid of NFTport API, the user can also query The Ethereum and Poligon blockchain to visualize the NFTS that belong to a given wallet address. The user can access the website with his personal crypto wallet through Metamask. The website is available but also is still being developped.",
+        "description": "Within the realm of Web3: Wrong Image is a Glitch Art Generator and NFT minter based on P5js. There are 7 different algorithms, each of which has their own parameters that allow the user to manipulate and blend pictures of multiple formats. The finalized image can be downloaded or stored on the IPFS (Inter Planetary File System) the industrial standard for NFT storage. Once the picture is saved the user can access his own gallery, and mint each of those immages into the Polygon chain. With the aid of NFTport API, the user can also query The Ethereum and Poligon blockchain to visualize the NFTS that belong to a given wallet address. The user can access the website with his personal crypto wallet through Metamask. The website under construction.",
         "development": "Javascript - React - Express - Node.js - P5JS - PostgreSQL"
+    },
+    {
+        "name": "beingbody",
+        "title": "Being Body",
+        "subtitle": "Massage therapist business website",
+        "url": "https://beingbody.net",
+        "gitHub": "https://github.com/StefAltavista/beingBody",
+        "images": [
+            "/images/beingbody/Logo.png",
+            "/images/beingbody/1.png",
+            "/images/beingbody/2.png",
+            "/images/beingbody/3.png"
+        ],
+        "background": "rgb(255, 224, 193)",
+        "color": "rgb(20, 0, 0)",
+        "tech": "Book an appointment with Katia Serena on her massage studio business presentational website ",
+        "description": "A good business requires a good website! Here K.S. showcases her concept as a massage therapist, and gives various informations regarding their studio, situated in Berlin - Neukölln. \n Contact the studio directly on the website via the Book an Appointment form. Send your information to the therapist before the apointment via the Wellnsess form",
+        "development": "Javascript - React - Express - Node.js - Nodemailer"
     },
     {
         "name": "noises",
@@ -39,16 +70,30 @@
         "description": "Noises was born as a social network for music labels, event organizers and promoters of the Berlin Noise, underground Techno and Experimental music scene. The aim of the network was to let oganizations comunicate, connect and collaborate more fluently, since this is often a delicate process. Noises is now also an online calendar where users can view published events and organizers profiles without the need of signing in. It's a free Platform that promotes alternative and countercoulture. S.A.M. created this platform to be used for his own Label Autonoma Industrile, as most of the current event promotion platforms are controlled by mediatic and commercial algorythms that do not push for cultural development but instead for the anihilation of individuality and for the subsitence and growth of a manipulated society. Since there is a big social movement in the realm of avantgarde, unconventional and extreme art, Noises wants to give a voice to the underdogs that have always been the foundation of our society and now need to reclaim their space. \n S.A.M has put together a team to further develope this platform, and it will soon be launched.",
         "development": "Javascript - React - Express - Node.js - PostgreSQL "
     },
+
+    {
+        "name": "avaink",
+        "title": "Ava - Ink",
+        "subtitle": "Artist Blog and Business website",
+        "url": "/",
+        "gitHub": "https://github.com/StefAltavista/avaink",
+        "images": ["/images/avaink/Logo.png", "/images/avaink/1.png"],
+        "background": "rgb(200, 100, 100)",
+        "color": "rgb(0, 0, 0)",
+        "tech": "Art, Tattoo designs and News from Ava Ink, book appointment, try her designs over your foto! ",
+        "description": "Ava Ink is a berlin based tattoo artist, this project consist in a SPA that she can personally update via log in page. Add Posts, designs just like every social network \n a Try out section allows the ser to upload a picture of theirselves and apply a design on top to have an overview of what the artwork will look like on their skin! \n \n website under maintance at the moment ",
+        "development": "Javascript - React - P5.js - AWS"
+    },
     {
         "name": "ultraviolet",
         "title": "Ultraviolet",
         "subtitle": "Web Synthesizer",
-        "url": "https://ultraviolet-synth.herokuapp.com",
+        "url": "/appultraviolet",
         "gitHub": "https://github.com/StefAltavista/ultraviolet",
         "images": ["/images/ultraviolet/Logo.png", "/images/ultraviolet/1.png"],
         "background": "rgb(200, 100, 100)",
         "color": "rgb(0, 0, 0)",
-        "tech": "Press play, make a sequence, add effects and start tweeking to generate a various spectrum of sounds - (UNDER PROCESSING)",
+        "tech": "Press play, make a sequence, add effects and start tweeking to generate a various spectrum of sounds",
         "description": "One page application Digital Synthesizer. Includes an FM Oscillator connected to an envelope generator and controlled by a step sequencer. Sequencer controls Frequency and triggers the ADSR, with adjustable number of steps. The sound gets routed through an effect rack with several selectable FX. \n Developped with Tone.js and React ",
         "development": "Javascript - React - Tone.js - AudioContext"
     },
@@ -116,18 +161,5 @@
         "tech": "This portfolio website is a one page application created for the purpose of giving an overview of the latest and most valuable projects created by Stefano Altavista Mascitti. Some of these application and projects are still active and in development, some others have been created specifically for practice and demonstrating purpuses.",
         "description": "",
         "development": "Javascript - Node.js - Express - React - P5js - Gsap"
-    },
-    {
-        "name": "about",
-        "title": "About S.A.M. ",
-        "subtitle": "Full-stack Web Developer",
-        "url": "./",
-        "gitHub": "https://github.com/StefAltavista",
-        "images": ["/images/about/Logo.png"],
-        "background": "rgb(255, 85, 85)",
-        "color": "rgb(0, 0, 0)",
-        "tech": "",
-        "description": "With a background in Electronics and Information Technology Stefano Altavista Mascitti is a Web and App developer with a highly creative and innovative drive. The past studies in Telecommunication Systems and languages such as C, C++, Java, PHP), the recent study of Javascript and many associate libraries and frameworks, joined with his artistic path as Musician and a Graphic designer makes S.A.M by every means a complete full stack web developer.",
-        "development": "Javascript - Typescript - Node.js - Express - React - React Native - Vue.js - Handlebars - P5js - SQL - C - Java - PHP"
     }
 ]

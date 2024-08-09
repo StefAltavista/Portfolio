@@ -1,16 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import NavBar from "./NavBar";
 import Background from "./Background";
 
-const projects = require("../../../content.json");
-
-export default function Project({ name }) {
-    console.log("PROJ", name);
+export default function Project({ name, projects }) {
     const project = projects.find((x) => x.name == name);
     const newline = (x) => x.split("\n").map((str, i) => <p key={i}>{str}</p>);
-    console.log(project.tech);
+
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [useLocation()]);
@@ -31,6 +29,7 @@ export default function Project({ name }) {
                             color: project.color,
                         },
                     }}
+                    projects={projects ? projects : null}
                 />
                 <div
                     id="projBody"
@@ -57,11 +56,14 @@ export default function Project({ name }) {
                     <div id="links">
                         {project.name != "about" &&
                         project.name != "mobileapps" ? (
-                            <a href={project.url} id="pLinkTo">
+                            <a href={project.url} id="pLinkTo" target="_blank">
                                 Visit Website
                             </a>
                         ) : null}
-                        <a href={project.gitHub} id="pLinkTo">
+                        {project.name == "about" && (
+                            <Link to="/contact">Request CV</Link>
+                        )}
+                        <a href={project.gitHub} id="pLinkTo" target="_blank">
                             Visit GitHub
                         </a>
                     </div>

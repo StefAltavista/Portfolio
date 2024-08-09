@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import Home from "./Home";
 import Project from "./Project";
 import Contact from "./Contact";
-import { HashRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
 
 export default function App() {
-    const projects = require("../../../content.json");
+    const [projects, setProjects] = useState();
     const [message, setMessage] = useState("");
     const newline = (x) => x.split("\n").map((str, i) => <p key={i}>{str}</p>);
 
@@ -18,16 +18,21 @@ export default function App() {
                     `Dear visitor\nSafari does not fully support this website\n 
                     Please use a different browser to unlock more complex animations`
                 );
-                // alert(
-                //     "Dear visitor \nPlease use a different browser to unlock complex animations"
-                // );
             }
         }
+        fetch("/api/content", {
+            method: "GET",
+            headers: { Authorization: "FuckYouWhatAreYouEvenTryingToGet?" },
+        })
+            .then((res) => res.json())
+            .then((response) =>
+                !response.fuck ? setProjects(response) : setProjects(null)
+            );
     }, []);
 
     return (
         <div>
-            <HashRouter>
+            <BrowserRouter>
                 {message ? (
                     <div id="alert">
                         <p id="close" onClick={() => setMessage("")}>
@@ -37,18 +42,29 @@ export default function App() {
                     </div>
                 ) : null}
                 <Routes>
-                    <Route exact path="/" element={<Home />}></Route>
-                    {projects.map((x) => (
-                        <Route
-                            exact
-                            path={"/" + x.name}
-                            element={<Project name={x.name} />}
-                            key={"/" + x.name}
-                        ></Route>
-                    ))}
+                    <Route
+                        exact
+                        path="/"
+                        element={<Home projects={projects ? projects : null} />}
+                    ></Route>
+                    {projects &&
+                        projects.map((x) => (
+                            <Route
+                                exact
+                                path={"/" + x.name}
+                                element={
+                                    <Project
+                                        name={x.name}
+                                        projects={projects ? projects : null}
+                                    />
+                                }
+                                key={"/" + x.name}
+                            ></Route>
+                        ))}
+
                     <Route exact path="/contact" element={<Contact />}></Route>
                 </Routes>
-            </HashRouter>
+            </BrowserRouter>
         </div>
     );
 }

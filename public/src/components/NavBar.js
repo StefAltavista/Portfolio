@@ -2,10 +2,9 @@ import React from "react";
 import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 
-export default function NavBar({ options }) {
+export default function NavBar({ options, projects }) {
     const { idn, css, projectMenu, projectMenuBG } = options;
     const [proj, setProj] = useState(projectMenu);
-    const projects = require("../../../content.json");
     const projMenu = useRef();
     const toggle = () => {
         setProj(!proj);
@@ -48,27 +47,28 @@ export default function NavBar({ options }) {
                         }
                         ref={projMenu}
                     >
-                        {projects.map((x) => {
-                            return x.name == "about" ? null : (
-                                <Link
-                                    to={`/${x.name}`}
-                                    key={x.name}
-                                    style={{
-                                        color: co,
-                                    }}
-                                >
-                                    <p
-                                        onClick={() => {
-                                            if (window.innerWidth < 800) {
-                                                toggle();
-                                            }
+                        {projects &&
+                            projects.map((x) => {
+                                return x.name == "about" ? null : (
+                                    <Link
+                                        to={`/${x.name}`}
+                                        key={x.name}
+                                        style={{
+                                            color: co,
                                         }}
                                     >
-                                        {x.title}
-                                    </p>
-                                </Link>
-                            );
-                        })}
+                                        <p
+                                            onClick={() => {
+                                                if (window.innerWidth < 800) {
+                                                    toggle();
+                                                }
+                                            }}
+                                        >
+                                            {x.title}
+                                        </p>
+                                    </Link>
+                                );
+                            })}
                     </div>
                 ) : null}
             </div>

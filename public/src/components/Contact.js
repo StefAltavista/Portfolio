@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Background from "./Background";
 import NavBar from "./NavBar";
+import { useParams } from "react-router-dom";
 
 export default function () {
     const [object, setObject] = useState("");
@@ -16,13 +17,15 @@ export default function () {
             `<strong>Message:</strong><br></br><p>${content}</p> </div> `;
 
         fetch("/api/contact", {
-            headers: { "Content-type": "application/json" },
+            headers: {
+                "Content-type": "application/json",
+                Authorization: "FuckYouWhatAreYouEvenTryingToGet?",
+            },
             method: "POST",
             body: JSON.stringify({ message }),
         })
             .then((res) => res.json())
             .then(({ result }) => {
-                console.log(result);
                 setResult(result);
             });
     };

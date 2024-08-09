@@ -12,7 +12,7 @@ export default function WaveComplex(p5) {
     p5.setup = () => {
         p5.createCanvas(w, h);
         p5.pixelDensity(1);
-        p5.frameRate(30);
+        p5.frameRate(22);
     };
     // ON WINDOW RESIZE : RESIZE CANVAS
     window.onresize = () => {

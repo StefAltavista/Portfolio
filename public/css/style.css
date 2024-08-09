@@ -23,7 +23,8 @@ a {
     font-family: "Courier New", Courier, monospace;
     color: rgb(0, 0, 0);
     z-index: 3;
-    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.807);
     padding: 10px;
     position: absolute;
     width: 200px;
@@ -53,6 +54,11 @@ a {
     flex-direction: column;
     width: 100%;
 }
+
+#nameTitle {
+    margin-bottom: 20%;
+}
+
 #projectsTitle {
     z-index: 1;
     position: fixed;
@@ -73,10 +79,12 @@ a {
 #sam h3 {
     font-size: 80px;
     margin-left: 20px;
+    margin-bottom: 0;
 }
 #sam p {
     font-size: 20px;
     margin-left: 20px;
+    margin-top: 0;
 }
 #background {
     height: 100vh;
@@ -206,6 +214,7 @@ p {
     align-items: center;
     min-height: 100vh;
     z-index: 1;
+    width: 100%;
 }
 #pTitle {
     font-size: 30px;

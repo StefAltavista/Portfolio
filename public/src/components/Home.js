@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 
@@ -6,11 +6,10 @@ import Background from "./Background.js";
 import ProjectPreview from "./ProjectPreview.js";
 import NavBar from "./NavBar.js";
 
-const projects = require("../../../content.json");
-
-export default function Home() {
+export default function Home({ projects }) {
     const nameTitle = useRef();
     const nameSubTitle = useRef();
+    const nameDescription = useRef();
     const sam = useRef();
     const navBarScroll = useRef();
 
@@ -18,8 +17,6 @@ export default function Home() {
         const scr = window.scrollY;
         sam.current.style.left = -parseFloat(scr) + "px";
         sam.current.style.opacity = 1 - scr / 800;
-
-        // navBarScroll.current.style.opacity = scr / 800;
         scr / 10 < 30
             ? ((navBarScroll.current.style.left = -30 + scr / 10 + "%"),
               (navBarScroll.current.style.opacity = scr / 100))
@@ -31,6 +28,7 @@ export default function Home() {
         window.scrollTo(0, 0);
         gsap.from(nameTitle.current, { opacity: 0, duration: 4 });
         gsap.from(nameSubTitle.current, { x: "-100%", duration: 4 });
+        gsap.from(nameDescription.current, { y: "1000%", duration: 4 });
 
         window.addEventListener("scroll", scrollLeft);
         return () => window.removeEventListener("scroll", scrollLeft);
@@ -42,15 +40,24 @@ export default function Home() {
                 <Background />
 
                 <div id="sam" ref={sam}>
-                    <div>
+                    <div id="nameTitle">
                         <Link to={`./about`}>
                             <h3 ref={nameTitle}>Stefano Altavista Mascitti</h3>
+                            <p ref={nameTitle}>
+                                Full Stack Developer & I.T. Specialist
+                            </p>
                         </Link>
                     </div>
-                    <p ref={nameSubTitle}>
-                        Continuous Creative Development <br></br> Full-Stack
-                        engineer
-                    </p>
+                    <div id="nameSubTitle">
+                        <p ref={nameSubTitle}>
+                            Continuous Creative Constructions
+                        </p>
+                        <p ref={nameDescription}>
+                            Blending creative insight with technical
+                            proficiency. <br></br>
+                            Crafting dynamic experiences for web and mobile
+                        </p>
+                    </div>
                 </div>
                 <div ref={navBarScroll} id="navBarScroll">
                     <NavBar
@@ -64,13 +71,15 @@ export default function Home() {
                                 color: "rgb(141, 202, 255)",
                             },
                         }}
+                        projects={projects ? projects : null}
                     />
                 </div>
             </div>
             <div id="board">
-                {projects.map((x) => {
-                    return <ProjectPreview project={x} key={x.name} />;
-                })}
+                {projects &&
+                    projects.map((x) => {
+                        return <ProjectPreview project={x} key={x.name} />;
+                    })}
             </div>
         </>
     );

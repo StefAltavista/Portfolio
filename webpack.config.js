@@ -9,6 +9,7 @@ module.exports = {
         path.join(__dirname, "public", "src", "start.js"),
     ],
     output: {
+        publicPath: "/",
         path: path.join(__dirname, "/dist"),
         filename: "bundle.js",
     },
@@ -17,6 +18,7 @@ module.exports = {
         new MiniCssExtractPlugin(),
     ],
     devServer: {
+        historyApiFallback: true,
         static: path.join(__dirname, "public"),
         proxy: {
             "/": {

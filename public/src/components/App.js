@@ -2,12 +2,15 @@ import React, { useState, useEffect } from "react";
 import Home from "./Home";
 import Project from "./Project";
 import Contact from "./Contact";
+import Background from "./Background.js";
 
-import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import NavBar from "./NavBar.js";
 
 export default function App() {
-    const [projects, setProjects] = useState();
+    const [projects, setProjects] = useState(null);
     const [message, setMessage] = useState("");
+
     const newline = (x) => x.split("\n").map((str, i) => <p key={i}>{str}</p>);
 
     useEffect(() => {
@@ -33,39 +36,48 @@ export default function App() {
 
     return (
         <div>
-            <BrowserRouter>
-                {message ? (
-                    <div id="alert">
-                        <p id="close" onClick={() => setMessage("")}>
-                            X
-                        </p>
-                        <p>{newline(message)}</p>
-                    </div>
-                ) : null}
-                <Routes>
-                    <Route
-                        exact
-                        path="/"
-                        element={<Home projects={projects ? projects : null} />}
-                    ></Route>
-                    {projects &&
-                        projects.map((x) => (
+            <Background />
+
+            {projects && (
+                <BrowserRouter>
+                    {message ? (
+                        <div id="alert">
+                            <p id="close" onClick={() => setMessage("")}>
+                                X
+                            </p>
+                            <p>{newline(message)}</p>
+                        </div>
+                    ) : null}
+                    <Routes>
+                        <Route
+                            exact
+                            path="/"
+                            element={<Home projects={projects} />}
+                        ></Route>
+
+                        {projects.map((x) => (
                             <Route
                                 exact
                                 path={"/" + x.name}
                                 element={
                                     <Project
                                         name={x.name}
-                                        projects={projects ? projects : null}
+                                        projects={projects}
                                     />
                                 }
                                 key={"/" + x.name}
                             ></Route>
                         ))}
 
-                    <Route exact path="/contact" element={<Contact />}></Route>
-                </Routes>
-            </BrowserRouter>
+                        <Route
+                            exact
+                            path="/contact"
+                            element={<Contact />}
+                        ></Route>
+                    </Routes>
+                    <NavBar projects={projects} />
+                </BrowserRouter>
+            )}
         </div>
     );
 }

@@ -1,11 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-
 import gsap from "gsap";
 import Typewriter from "typewriter-effect/dist/core";
-
-import Background from "./Background.js";
-import NavBar from "./NavBar.js";
 import Footer from "./Footer.js";
 
 export default function Home({ projects }) {
@@ -14,7 +10,6 @@ export default function Home({ projects }) {
     const nameDescription = useRef();
     const typeWriterText = useRef();
     const sam = useRef();
-    const navBarScroll = useRef();
     let typewriter;
     const techLogos = [
         "/images/techLogos/1.svg",
@@ -49,11 +44,6 @@ export default function Home({ projects }) {
         const scrl = window.scrollY;
         sam.current.style.left = -parseFloat(scrl) + "px";
         sam.current.style.opacity = 1 - scrl / 800;
-        scrl / 10 < 30
-            ? ((navBarScroll.current.style.left = -30 + scrl / 10 + "%"),
-              (navBarScroll.current.style.opacity = scrl / 100))
-            : ((navBarScroll.current.style.left = "0%"),
-              (navBarScroll.current.style.opacity = 1));
 
         if (scrl / 10 > 70) {
             typewriter.start();
@@ -68,8 +58,6 @@ export default function Home({ projects }) {
             duration: 4,
             delay: 1,
         });
-
-        window.addEventListener("scroll", scrollLeft);
 
         typewriter = new Typewriter("#typeWriterText", {
             delay: 40,
@@ -103,15 +91,13 @@ export default function Home({ projects }) {
             .typeString(
                 "Companies seeking to hire can also request my CV for further details."
             );
-
+        window.addEventListener("scroll", scrollLeft);
         return () => window.removeEventListener("scroll", scrollLeft);
     }, []);
 
     return (
         <>
             <div id="header">
-                <Background />
-
                 <div id="sam" ref={sam}>
                     <div id="nameTitle">
                         <Link to={`./about`}>
@@ -131,22 +117,6 @@ export default function Home({ projects }) {
                         </p>
                     </div>
                 </div>
-
-                <div ref={navBarScroll} id="navBarScroll">
-                    <NavBar
-                        options={{
-                            home: false,
-                            projectMenu: false,
-                            projectMenuBG: false,
-                            idn: "navBar",
-                            css: {
-                                backgroundColor: "transparent",
-                                color: "rgb(141, 202, 255)",
-                            },
-                        }}
-                        projects={projects ? projects : null}
-                    />
-                </div>
             </div>
             <div id="home_about">
                 <div id="intro">
@@ -162,20 +132,16 @@ export default function Home({ projects }) {
                     My constantly exapnding and evolving technology stack
                 </p>{" "}
                 <div>
-                    {techLogos.map((x) => (
-                        <img src={x} />
+                    {techLogos.map((x, idx) => (
+                        <img
+                            src={x}
+                            key={idx}
+                            alt="Stefano Altavista Web Developer"
+                        />
                     ))}
                 </div>
             </div>
             <Footer />
-            {/* <div id="board">
-                {projects &&
-                    projects.map((x) => {
-                        return x.name == "about" ? null : (
-                            <ProjectPreview project={x} key={x.name} />
-                        );
-                    })}
-            </div> */}
         </>
     );
 }

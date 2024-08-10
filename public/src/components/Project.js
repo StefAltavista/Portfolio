@@ -2,35 +2,19 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import NavBar from "./NavBar";
-import Background from "./Background";
 
 export default function Project({ name, projects }) {
     const project = projects.find((x) => x.name == name);
+    const location = useLocation().pathname;
     const newline = (x) => x.split("\n").map((str, i) => <p key={i}>{str}</p>);
 
     useEffect(() => {
         window.scrollTo(0, 0);
-    }, [useLocation()]);
+    }, [location]);
 
     return (
         <>
-            {" "}
-            <Background />
             <div id="project">
-                <NavBar
-                    options={{
-                        home: true,
-                        projectMenu: false,
-                        projectMenuBG: true,
-                        idn: "appear",
-                        css: {
-                            backgroundColor: project.background,
-                            color: project.color,
-                        },
-                    }}
-                    projects={projects ? projects : null}
-                />
                 <div
                     id="projBody"
                     style={

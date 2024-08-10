@@ -212,6 +212,8 @@ p {
     margin-bottom: 100px;
 }
 
+/* ------------------------------NAVBAR---------------------------*/
+
 #navBarScroll {
     left: -100%;
     position: fixed;
@@ -219,10 +221,27 @@ p {
     z-index: 2;
     overflow: scroll;
 }
-#navBar {
+
+#navBarFixed {
+    position: fixed;
+    opacity: 1;
+    z-index: 2;
+    top: 0px;
+    background-color: rgb(170, 105, 105);
+    height: 100vh;
+    width: 175px;
+    padding-top: 20px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: 1s;
+    left: 1px;
+}
+
+.offScreenNavBar {
     opacity: inherit;
     top: 0;
-    left: -1%;
+    /* left: -1%; */
     height: 100vh;
     width: 170px;
     padding: 20px;
@@ -232,11 +251,17 @@ p {
     transition: 1s;
     z-index: 1;
 }
-#navBar a,
+.offScreenNavBar a,
 p {
     color: none;
 }
-#navBar p:hover {
+.offScreenNavBar p:hover {
+    color: rgb(96, 105, 172);
+    cursor: pointer;
+}
+/* ON Screen NavBar */
+
+.onScreenNavBar p:hover {
     color: rgb(96, 105, 172);
     cursor: pointer;
 }
@@ -261,24 +286,6 @@ p {
     border: 1px solid white;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 100);
-    cursor: pointer;
-}
-
-#appear {
-    position: fixed;
-    background-color: rgb(170, 105, 105);
-    height: 100vh;
-    width: 170px;
-    padding-top: 20px;
-    padding-left: 20px;
-    display: flex;
-    flex-direction: column;
-    opacity: 100%;
-    transition: 1s;
-    z-index: 2;
-}
-#appear p:hover {
-    color: rgb(96, 105, 172);
     cursor: pointer;
 }
 
@@ -392,7 +399,7 @@ p {
         width: 100vw;
         position: absolute;
     }
-    #appear {
+    .onScreenNavBar {
         height: 50px;
         width: 100vw;
         padding-top: 0px;
@@ -413,7 +420,7 @@ p {
         margin: 0;
         padding: 15px;
     }
-    #appear #pList {
+    .onScreenNavBar #pList {
         top: 50px;
         border: 1px solid black;
         width: 102vw;
@@ -445,7 +452,7 @@ p {
         height: 60vh;
     }
 
-    #navBar {
+    .offScreenNavBar {
         height: 100vh;
         width: 30%;
         padding-left: 5px;
@@ -461,4 +468,13 @@ p {
     height: 100px;
     width: 100vw;
     bottom: 0px;
+}
+
+#social_media_contact {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#social_media_contact div img {
+    width: 70px;
 }

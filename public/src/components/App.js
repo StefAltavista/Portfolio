@@ -6,6 +6,7 @@ import Background from "./Background.js";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import NavBar from "./NavBar.js";
+import Footer from "./Footer.js";
 
 export default function App() {
     const [projects, setProjects] = useState(null);
@@ -40,6 +41,7 @@ export default function App() {
 
             {projects && (
                 <BrowserRouter>
+                    <NavBar projects={projects} />
                     {message ? (
                         <div id="alert">
                             <p id="close" onClick={() => setMessage("")}>
@@ -48,6 +50,7 @@ export default function App() {
                             <p>{newline(message)}</p>
                         </div>
                     ) : null}
+
                     <Routes>
                         <Route
                             exact
@@ -75,7 +78,8 @@ export default function App() {
                             element={<Contact />}
                         ></Route>
                     </Routes>
-                    <NavBar projects={projects} />
+
+                    <Footer />
                 </BrowserRouter>
             )}
         </div>

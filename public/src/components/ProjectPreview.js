@@ -17,7 +17,7 @@ export default function ProjectPreview({ project }) {
                         <h3>{project.title}</h3>
                     </div>
 
-                    <img src={project.images[0]} id="projLogo" />
+                    <img src={project.logo} id="projLogo" />
                     <p> {project.subtitle}</p>
                 </div>
             </Link>

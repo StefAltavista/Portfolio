@@ -1,31 +1,37 @@
 import React from "react";
-import Contact from "./Contact";
+import { Link } from "react-router-dom";
 export default function Footer() {
     const socialMediaLogos = [
         "/images/socialMediaLogos/1.svg",
+        "/images/socialMediaLogos/2.svg",
         "/images/socialMediaLogos/3.svg",
-        "/images/socialMediaLogos/4.svg",
     ];
     return (
         <div id="footer">
-            <Contact />
-            <div id="social_media_contact">
+            <div id="footer_contact" className="footer_section">
+                <Link to="/contact">Contact</Link>
                 {socialMediaLogos.map((x, idx) => (
-                    <div>
+                    <div key={idx}>
                         {" "}
-                        <img
-                            src={x}
-                            key={idx}
-                            alt="Stefano Altavista Web Developer"
-                        />
+                        <img src={x} alt="Stefano Altavista Web Developer" />
                     </div>
                 ))}
             </div>
-            <h3>
-                Build from scratch with React.js, Node.js, NoSql, P5.js and a
-                lot of Passion!
-            </h3>
-            <p>Copirigt 2022 stefanoaltavista.com. All Rights Reserved.</p>
+            <div id="footer_sitemap" className="footer_section">
+                <p>Sitemap</p>
+            </div>
+            <div id="footer_disclaimer" className="footer_section">
+                <p>
+                    This website does not collect any data and does not utilize
+                    any cookie! your privacy is safe.
+                </p>
+                <p>
+                    {" "}
+                    Build from scratch with React.js, Node.js, NoSql, P5.js and
+                    a lot of Passion!
+                </p>
+                <p>Copiright 2022 stefanoaltavista.com. All Rights Reserved.</p>
+            </div>
         </div>
     );
 }

@@ -32,7 +32,7 @@ export default function Contact() {
     return (
         <div id="contact">
             <div id="messageForm">
-                <h1>Contact S.A.M.</h1>
+                <h3 className="agraham">Contact S . A . M .</h3>
                 <form>
                     {!result ? (
                         <div>

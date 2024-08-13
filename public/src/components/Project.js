@@ -29,7 +29,7 @@ export default function Project({ name, projects }) {
                     <p id="pSub">{project.subtitle}</p>
                     <div id="pInfo">
                         <a href={project.url} target="blank">
-                            <img src={project.images[0]} id="pTop" />
+                            <img src={project.logo} id="pTop" />
                         </a>
                         <div id="pDescription">
                             {newline(project.description)}

@@ -38,6 +38,8 @@ export default function NavBar(props) {
         if (location === "/") {
             window.addEventListener("scroll", scrollLeft);
             scrollLeft();
+            setBg("rgb(0, 0, 0,0)");
+            setCo("rgb(141, 202, 255)");
         }
         return () => window.removeEventListener("scroll", scrollLeft);
     }, [location]);
@@ -51,10 +53,12 @@ export default function NavBar(props) {
             {location == "/" ? (
                 <>
                     <p
-                        onClick={() =>
-                            window.scrollTo({ top: 0, behavior: "smooth" })
-                        }
+                        className="agraham mix_blend"
+                        onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                        }}
                     >
+                        {" "}
                         Stefano<br></br>Altavista<br></br>Mascitti<br></br>
                     </p>
                 </>
